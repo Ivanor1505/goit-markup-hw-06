@@ -394,53 +394,91 @@
             </li>
           </ul>
         </div>
+        <form class="subscribe-form">
+          <label for="subscribe" class="subscribe-text">Subscribe</label>
+          <input
+            id="subscribe"
+            class="subscribe-input"
+            name="subscribe-email"
+            type="email"
+            placeholder="E-mail"
+          />
+          <button class="subscribe-button" type="submit">
+            Subscribe
+            <svg class="bat-icon-frame" width="24" height="24">
+              <use href="./images/icons.svg#frame"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
+
+    <!-- Модальне вікно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form class="modal-form">
           <p class="form-text">Leave your contacts and we will call you back</p>
           <label class="modal-form-field"
             ><span class="modal-form-desc">Name</span>
-            <input
-              class="form-input"
-              type="text"
-              name="user_name"
-              required
-              minlength="2"
-              pattern="^[a-zA-Zа-яА-Я]+$"
-              title=""
-          /></label>
+            <span class="form-thumb">
+              <input
+                class="form-input"
+                type="text"
+                name="user_name"
+                required
+                minlength="2"
+                pattern="^[a-zA-Zа-яА-Я]+$"
+                title=""
+              /><svg class="form-icon">
+                <use href="./images/icons.svg#person"></use>
+              </svg>
+            </span>
+          </label>
           <label class="modal-form-field"
-            ><span class="modal-form-desc">Phone</span
-            ><input
-              class="form-input"
-              type="tel"
-              name="user_phone_number"
-              required
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-              title="xxx-xxx-xx-xx"
-          /></label>
+            ><span class="modal-form-desc">Phone</span>
+            <span class="form-thumb">
+              <input
+                class="form-input"
+                type="tel"
+                name="user_phone_number"
+                required
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="xxx-xxx-xx-xx"
+              /><svg class="form-icon">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </span>
+          </label>
           <label class="modal-form-field"
-            ><span class="modal-form-desc">Email</span
-            ><input class="form-input" type="email" name="user_email" required
-          /></label>
+            ><span class="modal-form-desc">Email</span>
+            <span class="form-thumb">
+              <input
+                class="form-input"
+                type="email"
+                name="user_email"
+                required /><svg class="form-icon">
+                <use href="./images/icons.svg#email"></use></svg></span
+          ></label>
           <label class="modal-form-field"
             ><span class="modal-form-desc">Comment</span>
             <textarea
-              name="user_coment"
               class="form-coment"
+              name="user_coment"
               placeholder="Text input"
             ></textarea>
           </label>
           <input
-            class="form-check"
+            id="policy"
+            class="form-check ghost"
             type="checkbox"
             name="privacy_policy"
-            placeholder="Text input"
           />
-          <label class="modal-form-field"
-            >I accept the terms and conditions of the
+          <label for="policy" class="modal-form-field check-field"
+            ><span class="property-click-border"
+              ><svg class="property-click">
+                <use href="./images/icons.svg#property-click"></use></svg
+            ></span>
+            I accept the terms and conditions of the&nbsp;
             <a href="">Privacy Policy</a>
           </label>
           <button type="submit" class="modal-form-send">Send</button>
